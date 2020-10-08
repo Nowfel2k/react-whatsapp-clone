@@ -1,37 +1,44 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import './App.css';
-import Chat from './Components/Chat';
-import Sidebar from './Components/Sidebar';
+import './App.css'
+import Chat from './Components/Chat'
+import Sidebar from './Components/Sidebar'
+import Login from './Components/Login'
+import { useStateValue } from './StateProvider'
+import Home from './Components/Home'
 
 function App() {
+  
+  const [{ user }] = useStateValue()
+
   return (
-    <div className="app__body">
+    <div>
+      {!user ? (
+        <div className='app__body'><Login /></div>
+      ) : (
+        <div className='app__body'>
+          <Router>
+            <Sidebar />
 
-      <Router>
+              <Switch>
+                
 
-        <Sidebar />
+              <Route path='/rooms/:roomId'>
+                <Chat />
+              </Route>
 
-        <Switch>
+              <Route path='/'>
+                <Home />
+              </Route>
+                
 
-          <Route path="/rooms/:roomId">
-            <Chat />
-          </Route>
-
-
-          <Route path="/">
-            <Chat /> 
-          </Route>
-
-
-        </Switch>
-        
-      </Router>
-
-
-      </div>
-  );
+            </Switch>
+          </Router>
+        </div>
+      )}
+    </div>
+  )
 }
 
-export default App;
+export default App

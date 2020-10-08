@@ -2,25 +2,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border-bottom: 2px solid #f6f6f6;
-
+    padding-left: 10px;
 }
 
 .sidebarChat:hover {
     background-color: #ebebeb;
 }
 
-.sidebarChat__info > h2 {
-    font-size: 16px;
-    margin-bottom: 8px;
+.sidebarChat__info>h2 {
+    font-size: 17px;
+    font-weight: 450;
+}
+
+.sidebarChat__info>p {
+    font-size: 13px;
+    font-weight: 390;
+    color: gray;
 }
 
 .sidebarChat__info {
-    flex: 0.9;
-    margin-left: 15px;
+    flex: 0.94;
+    border-bottom: 1px solid #eeeded;
 }
 
 .add-new-option {
     cursor: default;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
 }

@@ -1,0 +1,33 @@
+.home {
+  flex: 0.7;
+  display: grid;
+  place-items: center;
+  border-bottom: 5px solid rgb(71, 255, 47);
+  background-color: rgb(244, 238, 255);
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 50px;
+  height: 50vh;
+  width: 50vw;
+  text-align: center !important;
+}
+
+.home__logo > img {
+  width: 200px;
+}
+
+.home__info > h2 {
+  font-weight: 350;
+}
+
+.home__info > p {
+  padding: 0px 120px;
+  margin-top: -10px !important;
+  font-size: 14px;
+  font-weight: 220;
+  color: gray;
+}
