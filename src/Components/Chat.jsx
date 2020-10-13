@@ -4,7 +4,7 @@ import MicIcon from '@material-ui/icons/Mic'
 import React, { useState, useEffect } from 'react'
 import '../Styles/Chat.css'
 import { useParams } from 'react-router-dom'
-import db from '../firebase-config'
+import db from '../firebase'
 import { useStateValue } from '../StateProvider'
 import firebase from 'firebase'
 

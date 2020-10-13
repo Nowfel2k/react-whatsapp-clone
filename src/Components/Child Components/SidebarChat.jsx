@@ -1,7 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import '../../Styles/SidebarChat.css'
-import db from '../../firebase-config'
+import db from '../../firebase'
 import { Link } from 'react-router-dom'
 
 function SidebarChat({ id, name, addNewChat }) {
